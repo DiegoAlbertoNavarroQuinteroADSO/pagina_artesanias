@@ -3,221 +3,323 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Artesanias del Hurtado valledupar</title>
+    <title>Artesanías del Hurtado Valledupar</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-<body>
+  <body>
     <header class="header">
-      <div class="menu container">
-        <a href="#" class="logo">logo</a>
-        <input type="checkbox" id="menu" />
-        <label for="menu">
-          <img src="images/menu.png" class="menu-icono" alt="menu" />
-        </label>
-        <nav class="navbar">
-          <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Contacto</a></li>
-         </ul>
-        </nav>
-        <div>
-          <ul>
-              <li class="submenu">
-                <img id="img-carrito" src="images/car.svg" alt="car" />
-                 <div id="carrito">
-                 <table id="lista-carrito">
-                    <thead>
-                       <tr>
-                         <th>Imagen</th>
-                         <th>Nombre</th>
-                         <th>precio</th>
-                      </tr>
-                    </thead>
-                    <tbody></tbody>
-                 </table>
-                 <a href="#" id="vaciar-Carrito">vaciar Carrito</a>
-               </div>
-             </li>
-           </ul>
-        </div>
+  <div class="menu container">
+    <div class="logo-container">
+    <a href="#" class="logo">Artesanías del Hurtado</a>
     </div>
+    <input type="checkbox" id="menu" />
+    <label for="menu">
+      <img src="images/menu.png" class="menu-icono" alt="Menú" />
+    </label>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li class="submenu">
+          <a href="#">
+            <img id="img-carrito" src="images/car.svg" alt="Carrito">
+            <span class="cart-count">0</span>
+          </a>
+          <div id="carrito">
+            <table id="lista-carrito">
+              <thead>
+                <tr>
+                  <th id="imagen-carrrito">Imagen</th>
+                  <th id="nombre-carrito">Nombre</th>
+                  <th id="precio-carrito">Precio</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="lista-carrito"></tbody>
+            </table>
+            <a href="#" id="vaciar-carrito" class="btn-2">Vaciar Carrito</a>
+            <p id="total-carrito">Total: $0</p>
+            <a href="#" id="btn-pagar" class="btn-2" style="display: none;">Pagar</a>              
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    
 
-    <div class="header-content container">
-      <div class="header-txt">
-        <span>Bienvenido a nuestra tienda</span>
-        <h1>Ofertas especiales</h1>
+    <!-- Secciones de la página -->
+    <!-- Seccion de Inicio -->
+    <section id="inicio" class="inicio">
+      <div class="inicio-content container">
+        <div class="inicio-text">
+          <h1>Bienvenido a Artesanías del Hurtado</h1>
+          <p>
+            Descubre la esencia de nuestra tradición y cultura en cada pieza
+            artesanal. Productos únicos hechos a mano, con materiales de alta
+            calidad y amor por nuestro arte.
+          </p>
+          <a href="#productos" class="btn-1">Explorar Productos</a>
+        </div>
+        </div>
+    </section>
+    <!-- Seccion de servicios-->
+    <section id="servicios" class="servicios">
+      <div class="servicios-content container">
+        <h2>Nuestros Servicios</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos harum 
-          exercitationem omnis, obcaecati expedita dolor iusto sapiente vitae rem eaque 
-          eius est error debitis saepe repellat quod officia. Doloremque, aspernatur.
+          Descubre todo lo que podemos ofrecerte para que vivas la experiencia
+          de nuestras artesanías.
         </p>
-        <div class="butons">
-          <a href="#" class="btn-1">Información</a>
-          <a href="#" class="btn-1">Leer más</a>
+        <div class="servicios-grid">
+          <!-- Servicio 1 -->
+          <div class="servicio-item">
+            <img src="images/artesano1.png" alt="Diseño personalizado" />
+            <h3>Diseño Personalizado</h3>
+            <p>
+              Creación de artesanías exclusivas según tus necesidades y gustos.
+            </p>
+          </div>
+          <!-- Servicio 2 -->
+          <div class="servicio-item">
+            <img src="images/mayor.png" alt="Venta al por mayor" />
+            <h3>Venta al Por Mayor</h3>
+            <p>
+              Ofrecemos precios especiales para pedidos en grandes cantidades.
+            </p>
+          </div>
+          <!-- Servicio 3 -->
+          <div class="servicio-item">
+            <img src="images/envios.png" alt="Envíos internacionales" />
+            <h3>Envíos Internacionales</h3>
+            <p>Llevamos nuestras artesanías a cualquier lugar del mundo.</p>
+          </div>
+          </div>
         </div>
       </div>
-      <div class="header-img">
-        <img src="images/bag.png" alt="Bolso de compras">            
+    </section>
+    <!-- seccion de productos -->
+    <main id="productos" class="products container">
+      <h2>Productos</h2>
+      <div class="box-container" id="lista-1">
+        <div class="box">
+          <img src="images/artes1.png" alt="Porta incienso" />
+          <div class="products-txt">
+            <h3>Porta incienso</h3>
+            <p>Calidad premium</p>
+            <p class="precio">$25,000</p>
+            <a href="#" class="agregar-carrito btn-3" data-id="1"
+              >Agregar al carrito</a
+            >
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/artes2.png" alt="Destapador artesanal" />
+          <div class="products-txt">
+            <h3>Destapador artesanal</h3>
+            <p>Calidad original</p>
+            <p class="precio">$10,000</p>
+            <a href="#" class="agregar-carrito btn-3" data-id="2"
+              >Agregar al carrito</a
+            >
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/artes3.png" alt="Avanico de mano" />
+          <div class="products-txt">
+            <h3>Avanico de mano</h3>
+            <p>Calidad en palma de iraca</p>
+            <p class="precio">$15,000</p>
+            <a href="#" class="agregar-carrito btn-3" data-id="3"
+              >Agregar al carrito</a
+            >
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/artes4.png" alt="Recuerdo valledupar" />
+          <div class="products-txt">
+            <h3>Recuerdo valledupar</h3>
+            <p>Calidad en madera</p>
+            <p class="precio">$20,000</p>
+            <a href="#" class="agregar-carrito btn-3" data-id="4"
+              >Agregar al carrito</a
+            >
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/artes5.png" alt="Sandalia artesanal" />
+          <div class="products-txt">
+            <h3>Sandalia artesanal</h3>
+            <p>Calidad en cuero</p>
+            <p class="precio">$50,000</p>
+            <a href="#" class="agregar-carrito btn-3" data-id="5"
+              >Agregar al carrito</a
+            >
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/artes6.png" alt="Sombrero vueltiao" />
+          <div class="products-txt">
+            <h3>Sombrero 15 vueltas</h3>
+            <p>Calidad exclusivo</p>
+            <p class="precio">$280,000</p>
+            <a href="#" class="agregar-carrito btn-3" data-id="6"
+              >Agregar al carrito</a
+            >
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/artes7.png" alt="Hamaca doble" />
+          <div class="products-txt">
+            <h3>Hamaca doble flecos</h3>
+            <p>Calidad original algodon</p>
+            <p class="precio">$650,000</p>
+            <a href="#" class="agregar-carrito btn-3" data-id="7"
+              >Agregar al carrito</a
+            >
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/artes8.png" alt="Estera artesanal" />
+          <div class="products-txt">
+            <h3>Estera artesanal</h3>
+            <p>Calidad lana de oveja</p>
+            <p class="precio">$90,000</p>
+            <a href="#" class="agregar-carrito btn-3" data-id="8"
+              >Agregar al carrito</a
+            >
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/artes9.png" alt="Porta llaves" />
+          <div class="products-txt">
+            <h3>Porta llaves madera tigres</h3>
+            <p>Calidad premium</p>
+            <p class="precio">$35,000</p>
+            <a href="#" class="agregar-carrito btn-3" data-id="9"
+              >Agregar al carrito</a
+            >
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/artes10.png" alt="Juego tamboras" />
+          <div class="products-txt">
+            <h3>Artesania juego de tamboras</h3>
+            <p>Calidad premium</p>
+            <p class="precio">$25,000</p>
+            <a href="#" class="agregar-carrito btn-3" data-id="10"
+              >Agregar al carrito</a
+            >
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/artes11.png" alt="Mochila azul" />
+          <div class="products-txt">
+            <h3>Mochila Arhuaca lana de oveja azul</h3>
+            <p>Calidad replica</p>
+            <p class="precio">$30,000</p>
+            <a href="#" class="agregar-carrito btn-3" data-id="11"
+              >Agregar al carrito</a
+            >
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/artes12.png" alt="Mochila cafe" />
+          <div class="products-txt">
+            <h3>Mochila Arhuaca lana de oveja cafe</h3>
+            <p>Calidad original</p>
+            <p class="precio">$250,000</p>
+            <a href="#" class="agregar-carrito btn-3" data-id="12"
+              >Agregar al carrito</a
+            >
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/artes13.png" alt="Sombrero vueltiao" />
+          <div class="products-txt">
+            <h3>Sombrero vueltiao tricolor 21 vueltas</h3>
+            <p>Calidad original en caña de flecha</p>
+            <p class="precio">$220,000</p>
+            <a href="#" class="agregar-carrito btn-3" data-id="13"
+              >Agregar al carrito</a
+            >
+          </div>
+        </div>
       </div>
-    </div>
 
-  </header>
+      <div class="btn-2" id="load-more">Cargar Más</div>
+    </main>
+ <!-- Sección de Contacto -->
+<section id="contacto" class="contacto">
+  <div class="container">
+    <h2>Contacto</h2>
+    <p>Ponte en contacto con nosotros por correo o redes sociales.</p>
 
-  <section class="oferts container">
+    <form id="contacto-form">
+      <div class="input-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre" required />
+      </div>
 
-    <div class="oferts-1 b1">
-      <div class="oferts-txt">
-        <h3>lorem impsum sit</h3>
-        <a href="#">Leer más</a>
+      <div class="input-group">
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="Tu Correo" required />
       </div>
-      <div class="ofert-img">
-        <img src="images/artesano1.png" alt="Imagen de un artesano">
-      </div>
-    </div>
-    <div class="oferts-1 b2">
-      <div class="oferts-txt">
-        <h3>lorem impsum sit</h3>
-        <a href="#">Leer más</a>
-      </div>
-      <div class="ofer-img">
-        <img src="images/artesano2.jpg" alt="Imagen de un artesano">
-      </div>
-    </div
-    <div class="oferts-1 b3">
-      <div class="oferts-txt">
-        <h3>lorem impsum sit</h3>
-        <a href="#">Leer más</a>
-      </div>
-      <div class="ofer-img">
-        <img src="images/artesnano3.jpg" alt="Imagen de un artesano">
-      </div>
-    </div>
-  </section>
-<!-- seccion de productos -->
-  <main class="products container">
-    <h2>Productos</h2>
-    <div class="box container" id="lista-1">
-      <div class="box">
-        <img src="images/artes1.png" alt="Porta incienso">
-        <div class="products-txt">
-          <h3>Porta incienso</h3>
-          <p>Calidad premium</p>
-          <p class="precio">$25,000</p>
-          <a href="#" class="agregar-carrito btn-3" data-id="1">Agregar al carrito</a>
-        </div>
-      </div>
-      <div class="box">
-        <img src="images/artes2.png" alt="Destapador artesanal">
-        <div class="products-txt">
-          <h3>Destapador artesanal</h3>
-          <p>Calidad original</p>
-          <p class="precio">$10,000</p>
-          <a href="#" class="agregar-carrito btn-3" data-id="2">Agregar al carrito</a>
-        </div>
-      </div>
-      <div class="box">
-        <img src="images/artes3.png" alt="Avanico de mano">
-        <div class="products-txt">
-          <h3>Avanico de mano</h3>
-          <p>Calidad en palma de iraca</p>
-          <p class="precio">$15,000</p>
-          <a href="#" class="agregar-carrito btn-3" data-id="3">Agregar al carrito</a>
-        </div>
-      </div>
-      <div class="box">
-        <img src="images/artes4.png" alt="Recuerdo valledupar">
-        <div class="products-txt">
-          <h3>Recuerdo valledupar</h3>
-          <p>Calidad en madera</p>
-          <p class="precio">$20,000</p>
-          <a href="#" class="agregar-carrito btn-3" data-id="4">Agregar al carrito</a>
-        </div>
-      </div>
-      <div class="box">
-        <img src="images/artes5.png" alt="Sandalia artesanal">
-        <div class="products-txt">
-          <h3>Sandalia artesanal caña flecha</h3>
-          <p>Calidad en cuero y caña flecha</p>
-          <p class="precio">$50,000</p>
-          <a href="#" class="agregar-carrito btn-3" data-id="5">Agregar al carrito</a>
-        </div>
-      </div>
-      <div class="box">
-        <img src="images/artes6.png" alt="Sombrero vueltiao">
-        <div class="products-txt">
-          <h3>Sombrero vueltiao 15 vueltas</h3>
-          <p>Calidad exclusivo en caña flecha</p>
-          <p class="precio">$280,000</p>
-          <a href="#" class="agregar-carrito btn-3" data-id="6">Agregar al carrito</a>
-        </div>
-      </div>
-      <div class="box">
-        <img src="images/artes7.png" alt="Hamaca doble">
-        <div class="products-txt">
-          <h3>Hamaca doble Con flecos 100% artesanal</h3>
-          <p>Calidad original algodon</p>
-          <p class="precio">$650,000</p>
-          <a href="#" class="agregar-carrito btn-3" data-id="7">Agregar al carrito</a>
-        </div>
-      </div>
-      <div class="box">
-        <img src="images/artes8.png" alt="Estera artesanal">
-        <div class="products-txt">
-          <h3>Estera artesanal</h3>
-          <p>Calidad lana de oveja</p>
-          <p class="precio">$90,000</p>
-          <a href="#" class="agregar-carrito btn-3" data-id="8">Agregar al carrito</a>
-        </div>
-      </div>
-      <div class="box">
-        <img src="images/artes9.png" alt="Porta llaves">
-        <div class="products-txt">
-          <h3>Porta llaves madera tigres</h3>
-          <p>Calidad premium</p>
-          <p class="precio">$35,000</p>
-          <a href="#" class="agregar-carrito btn-3" data-id="9">Agregar al carrito</a>
-        </div>
-      </div>
-      <div class="box">
-        <img src="images/artes10.png" alt="Juego tamboras">
-        <div class="products-txt">
-          <h3>Artesania juego de tamboras</h3>
-          <p>Calidad premium</p>
-          <p class="precio">$25,000</p>
-          <a href="#" class="agregar-carrito btn-3" data-id="10">Agregar al carrito</a>
-        </div>
-      </div>
-      <div class="box">
-        <img src="images/artes11.png" alt="Mochila azul">
-        <div class="products-txt">
-          <h3>Mochila Arhuaca lana de oveja azul</h3>
-          <p>Calidad replica</p>
-          <p class="precio">$30,000</p>
-          <a href="#" class="agregar-carrito btn-3" data-id="11">Agregar al carrito</a>
-        </div>
-      </div>
-      <div class="box">
-        <img src="images/artes12.png" alt="Mochila cafe">
-        <div class="products-txt">
-          <h3>Mochila Arhuaca lana de oveja cafe</h3>
-          <p>Calidad original</p>
-          <p class="precio">$250,000</p>
-          <a href="#" class="agregar-carrito btn-3" data-id="12">Agregar al carrito</a>
-        </div>
-      </div>
-      <div class="box">
-        <img src="images/artes13.png" alt="Sombrero vueltiao">
-        <div class="products-txt">
-          <h3>Sombrero vueltiao tricolor 21 vueltas</h3>
-          <p>Calidad original en caña de flecha</p>
-          <p class="precio">$220,000</p>
-          <a href="#" class="agregar-carrito btn-3" data-id="13">Agregar al carrito</a>
-        </div>
-      </div>
-    </div>
-  </main>
 
-    <script src="script.js"></script>
-</body>
+      <div class="input-group">
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn-1">Enviar</button>
+    </form>
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-content container">
+      <div class="footer-top">
+          <!-- Sección de Políticas -->
+          <div class="politicas">
+              <h3>Políticas</h3>
+              <ul>
+                  <li><a href="politica-envio.html">Política de Envíos</a></li>
+                  <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                  <li><a href="politica-devoluciones.html">Política de Devoluciones</a></li>
+              </ul>
+          </div>
+
+          <!-- Sección de Redes Sociales -->
+          <div class="redes-sociales">
+              <a href="#">
+                  <img src="images/facebook (1).png" alt="Facebook">
+                  <span>Facebook</span>
+              </a>
+              <a href="#">
+                  <img src="images/instagram.png" alt="Instagram">
+                  <span>Instagram</span>
+              </a>
+              <a href="#">
+                  <img src="images/whatsapp.png" alt="WhatsApp">
+                  <span>WhatsApp</span>
+              </a>
+              <a href="#">
+                  <img src="images/x.png" alt="X">
+                  <span>X (Twitter)</span>
+              </a>
+              <a href="#">
+                  <img src="images/tik-tok.png" alt="TikTok">
+                  <span>TikTok</span>
+              </a>
+          </div>
+      </div>
+
+      <!-- Párrafo de Derechos Reservados -->
+      <p>&copy; 2025 Artesanías del Hurtado - Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+  </body>
 </html>
