@@ -1,0 +1,583 @@
+/* Importar fuente desde Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+/* Estilos globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #757371;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Estilos del Header */
+.header {
+  background-color: #8b5e3c;
+  padding: 20px 0;
+  position: relative;
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.logo-container {
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.logo-img {
+  width: 70px; /* Tamaño del logo como en tu captura */
+  height: auto;
+  display: block;
+}
+
+.logo-text {
+  font-size: 25px; /* Tamaño del texto original del logo */
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #ffffff; /* Color blanco para coincidir con el diseño original */
+  white-space: nowrap; /* Evita que el texto se rompa en líneas */
+}
+
+.navbar ul li {
+  float: left;
+  position: relative;
+}
+
+.navbar ul li a {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 20px;
+  color: #111419;
+  display: block;
+}
+
+.navbar ul li a:hover {
+  color: #ffffff;
+}
+
+#menu {
+  display: none;
+}
+
+.menu-icono {
+  width: 25px;
+}
+
+.menu label {
+  cursor: pointer;
+  display: none;
+}
+
+.submenu {
+  position: relative;
+  margin-left: 15px;
+}
+
+#img-carrito {
+  width: 35px;
+  filter: brightness(0) invert(1);
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: #ff6b6b;
+  color: white;
+  border-radius: 50%;
+  padding: 3px 8px;
+  font-size: 0.8rem;
+}
+
+#carrito {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  padding: 25px;
+  width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.submenu:hover #carrito {
+  display: block;
+}
+
+#cerrar-carrito {
+  float: right;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#lista-carrito {
+  width: 100%;
+  background-color: #ffffff;
+  border-collapse: collapse;
+}
+
+#lista-carrito td,
+#lista-carrito th {
+  padding: 5px;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  vertical-align: middle;
+}
+
+#lista-carrito tr {
+  background-color: #ffffff;
+}
+
+.cart-item-cell {
+  background-color: #ffffff;
+}
+
+.btn-eliminar {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px;
+  background-color: #ffffff;
+}
+
+/* Estilos del botón de vaciar carrito */
+#vaciar-carrito {
+  background-color: #dc3545; /* Fondo rojo */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambiar cursor al pasar */
+  transition: background-color 0.3s ease; /* Transición suave */
+  flex: 1; /* Ocupar espacio disponible */
+}
+
+#vaciar-carrito:hover {
+  background-color: #c82333; /* Color rojo más oscuro al pasar */
+}
+
+/* Estilos del botón de pagar */
+#btn-pagar {
+  background-color: #28a745; /* Fondo verde */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambiar cursor al pasar */
+  transition: background-color 0.3s ease; /* Transición suave */
+  flex: 1; /* Ocupar espacio disponible */
+}
+
+#btn-pagar:hover {
+  background-color: #218838; /* Color verde más oscuro al pasar */
+}
+
+.cart-footer {
+  text-align: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 15px;
+}
+
+.cart-footer #vaciar-carrito,
+.cart-footer #total-carrito {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* Estilos de la sección Inicio */
+.inicio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+  background: #e7e6e5;
+  color: #0a0303;
+  text-align: center;
+}
+
+.inicio-text h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.inicio-text p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Estilos de los botones */
+.btn-1 {
+  padding: 15px 40px;
+  background-color: #683610;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-1:hover {
+  background-color: #e5d223;
+  transform: scale(1.05);
+}
+
+.btn-2 {
+  background-color: #9c5f31;
+  color: #ffffff;
+  padding: 11px 35px;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-2:hover {
+  background-color: #e5d223;
+  transform: scale(1.05);
+}
+
+.btn-3 {
+  background-color: #9c5f31;
+  margin-top: 30px;
+  display: inline-block;
+  padding: 11px 35px;
+  border-radius: 25px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-3:hover {
+  background-color: #e5d223;
+  transform: scale(1.05);
+}
+
+/* Estilo del botón "Cargar Más" */
+#load-more {
+  margin: 30px auto 0;
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #9c5f31;
+  color: #ffffff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#load-more:hover {
+  background-color: #e5d223;
+  transform: scale(1.05);
+}
+
+/* Estilos de la sección Servicios */
+.servicios {
+  padding: 100px 20px;
+  background-color: #f5e6d3;
+  text-align: center;
+}
+
+.servicios h2 {
+  font-size: 2.5rem;
+  color: #111419;
+  margin-bottom: 20px;
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.servicio-item {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos de la sección Productos */
+.products {
+  padding: 0 0 50px 0;
+  text-align: center;
+}
+
+.box-container {
+  margin-top: 55px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.box {
+  border-top: 2px solid #9bce21;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  background-color: #f6fafb;
+  display: none;
+}
+
+.box:nth-child(-n + 8) {
+  display: inline-block;
+}
+
+.box img {
+  height: 200px;
+  transition: transform 0.3s ease;
+}
+
+.box:hover img {
+  transform: scale(1.05);
+}
+
+.products-txt h3 {
+  font-size: 20px;
+  color: #111419;
+}
+
+.precio {
+  font-size: 17px;
+  font-weight: 700;
+  color: #ff9100;
+}
+
+/* Estilos de la sección Contacto */
+.contacto {
+  background: #f8f8f8;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contacto h2 {
+  font-size: 2.5rem;
+  color: #111419;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Estilos del Footer */
+.footer {
+  background-color: #8b5e3c;
+  padding: 30px 0;
+  color: #ffffff;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.politicas,
+.redes-sociales {
+  flex: 1;
+}
+
+.politicas a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.politicas a:hover {
+  color: #e5e5e5;
+  text-decoration: underline;
+}
+
+.redes-sociales {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.red-social-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  width: 60px;
+}
+
+.red-social-item img {
+  width: 40px;
+  height: 40px;
+}
+
+.red-social-item span {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.footer-copyright {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 0;
+  }
+
+  .logo {
+    gap: 5px; /* Reduce el espacio entre imagen y texto en pantallas pequeñas */
+  }
+
+  .logo-img {
+    width: 70px; /* Reduce el tamaño del logo en pantallas pequeñas */
+  }
+
+  .logo-text {
+    font-size: 20px; /* Reduce el tamaño del texto en pantallas pequeñas */
+  }
+
+  .inicio-text h1 {
+    font-size: 2rem;
+  }
+
+  .inicio-text p {
+    font-size: 1rem;
+  }
+
+  .servicios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #carrito {
+    width: 100%;
+    margin: 0 10px;
+  }
+
+  #lista-carrito td,
+  #lista-carrito th {
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  .cart-footer {
+    text-align: center;
+  }
+
+  .cart-footer #vaciar-carrito,
+  .cart-footer #total-carrito {
+    display: block;
+    margin: 5px 0;
+  }
+
+  /* Ajustes responsivos para el footer */
+  .footer-top {
+    display: block;
+    text-align: center;
+  }
+
+  .politicas,
+  .redes-sociales {
+    flex: none;
+    margin-bottom: 15px;
+  }
+
+  .politicas a {
+    color: #ffffff;
+  }
+
+  .politicas a:hover {
+    color: #e5e5e5;
+  }
+
+  .redes-sociales {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .red-social-item {
+    width: 50px;
+  }
+
+  .red-social-item span {
+    font-size: 10px;
+  }
+
+  .footer-copyright {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .menu label {
+    display: initial;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #b49278;
+    display: none;
+  }
+
+  .navbar ul li {
+    width: 100%;
+  }
+
+  #menu:checked ~ .navbar {
+    display: block;
+  }
+}
