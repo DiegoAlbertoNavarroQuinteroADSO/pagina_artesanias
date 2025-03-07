@@ -3,109 +3,129 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Compra artesanías únicas hechas a mano en Valledupar, Colombia.
+        Envíos internacionales y diseños personalizados."
+    />
+    <meta
+      name="keywords"
+      content="artesanías, Valledupar, Colombia, handmade, tienda online"
+    />
     <title>Artesanías del Hurtado Valledupar</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Header -->
     <header class="header">
-  <div class="menu container">
-    <div class="logo-container">
-    <a href="#" class="logo">Artesanías del Hurtado</a>
-    </div>
-    <input type="checkbox" id="menu" />
-    <label for="menu">
-      <img src="images/menu.png" class="menu-icono" alt="Menú" />
-    </label>
-    <nav class="navbar">
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#productos">Productos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-        <li class="submenu">
-          <a href="#">
-            <img id="img-carrito" src="images/car.svg" alt="Carrito">
-            <span class="cart-count">0</span>
+      <div class="menu container">
+        <div class="logo-container">
+          <a href="#" class="logo">
+            <img
+              src="images/header.webp"
+              alt="Artesanías del Hurtado"
+              class="logo-img"
+            />
+            <span class="logo-text">Artesanías del Hurtado</span>
           </a>
-          <div id="carrito">
-            <table id="lista-carrito">
-              <thead>
-                <tr>
-                  <th id="imagen-carrrito">Imagen</th>
-                  <th id="nombre-carrito">Nombre</th>
-                  <th id="precio-carrito">Precio</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody id="lista-carrito"></tbody>
-            </table>
-            <a href="#" id="vaciar-carrito" class="btn-2">Vaciar Carrito</a>
-            <p id="total-carrito">Total: $0</p>
-            <a href="#" id="btn-pagar" class="btn-2" style="display: none;">Pagar</a>              
-          </div>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
-    
+        </div>
+        <input type="checkbox" id="menu" />
+        <label for="menu">
+          <img src="images/menu.png" class="menu-icono" alt="Ícono de menú" />
+        </label>
+        <nav class="navbar">
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li class="submenu">
+              <a href="#" aria-label="Abrir carrito de compras">
+                <img
+                  id="img-carrito"
+                  src="images/car.svg"
+                  alt="Ícono de carrito de compras"
+                />
+                <span class="cart-count">0</span>
+              </a>
+              <div id="carrito">
+                <button id="cerrar-carrito">X</button>
+                <table id="lista-carrito">
+                  <thead>
+                    <tr>
+                      <th>Imagen</th>
+                      <th>Nombre</th>
+                      <th>Precio</th>
+                      <th>Cantidad</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+                <div class="cart-footer">
+                  <a href="#" id="vaciar-carrito" class="btn-2"
+                    >Vaciar Carrito</a
+                  >
+                  <p id="total-carrito">Total: $0</p>
+                </div>
+                <a href="#" id="btn-pagar" class="btn-2" style="display: none"
+                  >Pagar</a
+                >
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-    <!-- Secciones de la página -->
-    <!-- Seccion de Inicio -->
+    <!-- Sección Inicio -->
     <section id="inicio" class="inicio">
       <div class="inicio-content container">
         <div class="inicio-text">
           <h1>Bienvenido a Artesanías del Hurtado</h1>
           <p>
             Descubre la esencia de nuestra tradición y cultura en cada pieza
-            artesanal. Productos únicos hechos a mano, con materiales de alta
-            calidad y amor por nuestro arte.
+            artesanal. Productos únicos hechos a mano con amor y calidad.
           </p>
           <a href="#productos" class="btn-1">Explorar Productos</a>
         </div>
-        </div>
+      </div>
     </section>
-    <!-- Seccion de servicios-->
+
+    <!-- Sección Servicios -->
     <section id="servicios" class="servicios">
       <div class="servicios-content container">
         <h2>Nuestros Servicios</h2>
         <p>
-          Descubre todo lo que podemos ofrecerte para que vivas la experiencia
-          de nuestras artesanías.
+          Explora lo que ofrecemos para que vivas la experiencia de nuestras
+          artesanías.
         </p>
         <div class="servicios-grid">
-          <!-- Servicio 1 -->
           <div class="servicio-item">
-            <img src="images/artesano1.png" alt="Diseño personalizado" />
+            <img src="images/artesano1.webp" alt="Diseño personalizado" />
             <h3>Diseño Personalizado</h3>
-            <p>
-              Creación de artesanías exclusivas según tus necesidades y gustos.
-            </p>
+            <p>Creación de artesanías exclusivas según tus gustos.</p>
           </div>
-          <!-- Servicio 2 -->
           <div class="servicio-item">
-            <img src="images/mayor.png" alt="Venta al por mayor" />
+            <img src="images/mayor.webp" alt="Venta al por mayor" />
             <h3>Venta al Por Mayor</h3>
-            <p>
-              Ofrecemos precios especiales para pedidos en grandes cantidades.
-            </p>
+            <p>Precios especiales para pedidos en grandes cantidades.</p>
           </div>
-          <!-- Servicio 3 -->
           <div class="servicio-item">
-            <img src="images/envios.png" alt="Envíos internacionales" />
+            <img src="images/envios.webp" alt="Envíos internacionales" />
             <h3>Envíos Internacionales</h3>
             <p>Llevamos nuestras artesanías a cualquier lugar del mundo.</p>
-          </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- seccion de productos -->
+
+    <!-- Sección Productos -->
     <main id="productos" class="products container">
       <h2>Productos</h2>
       <div class="box-container" id="lista-1">
         <div class="box">
-          <img src="images/artes1.png" alt="Porta incienso" />
+          <img src="images/artes1.webp" alt="Porta incienso" />
           <div class="products-txt">
             <h3>Porta incienso</h3>
             <p>Calidad premium</p>
@@ -116,7 +136,7 @@
           </div>
         </div>
         <div class="box">
-          <img src="images/artes2.png" alt="Destapador artesanal" />
+          <img src="images/artes2.webp" alt="Destapador artesanal" />
           <div class="products-txt">
             <h3>Destapador artesanal</h3>
             <p>Calidad original</p>
@@ -127,7 +147,18 @@
           </div>
         </div>
         <div class="box">
-          <img src="images/artes3.png" alt="Avanico de mano" />
+          <img src="images/artes2.webp" alt="Destapador artesanal" />
+          <div class="products-txt">
+            <h3>Destapador artesanal</h3>
+            <p>Calidad original</p>
+            <p class="precio">$10,000</p>
+            <a href="#" class="agregar-carrito btn-3" data-id="2"
+              >Agregar al carrito</a
+            >
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/artes3.webp" alt="Avanico de mano" />
           <div class="products-txt">
             <h3>Avanico de mano</h3>
             <p>Calidad en palma de iraca</p>
@@ -138,7 +169,7 @@
           </div>
         </div>
         <div class="box">
-          <img src="images/artes4.png" alt="Recuerdo valledupar" />
+          <img src="images/artes4.webp" alt="Recuerdo valledupar" />
           <div class="products-txt">
             <h3>Recuerdo valledupar</h3>
             <p>Calidad en madera</p>
@@ -149,7 +180,7 @@
           </div>
         </div>
         <div class="box">
-          <img src="images/artes5.png" alt="Sandalia artesanal" />
+          <img src="images/artes5.webp" alt="Sandalia artesanal" />
           <div class="products-txt">
             <h3>Sandalia artesanal</h3>
             <p>Calidad en cuero</p>
@@ -160,7 +191,7 @@
           </div>
         </div>
         <div class="box">
-          <img src="images/artes6.png" alt="Sombrero vueltiao" />
+          <img src="images/artes6.webp" alt="Sombrero vueltiao" />
           <div class="products-txt">
             <h3>Sombrero 15 vueltas</h3>
             <p>Calidad exclusivo</p>
@@ -171,7 +202,7 @@
           </div>
         </div>
         <div class="box">
-          <img src="images/artes7.png" alt="Hamaca doble" />
+          <img src="images/artes7.webp" alt="Hamaca doble" />
           <div class="products-txt">
             <h3>Hamaca doble flecos</h3>
             <p>Calidad original algodon</p>
@@ -182,7 +213,7 @@
           </div>
         </div>
         <div class="box">
-          <img src="images/artes8.png" alt="Estera artesanal" />
+          <img src="images/artes8.webp" alt="Estera artesanal" />
           <div class="products-txt">
             <h3>Estera artesanal</h3>
             <p>Calidad lana de oveja</p>
@@ -193,7 +224,7 @@
           </div>
         </div>
         <div class="box">
-          <img src="images/artes9.png" alt="Porta llaves" />
+          <img src="images/artes9.webp" alt="Porta llaves" />
           <div class="products-txt">
             <h3>Porta llaves madera tigres</h3>
             <p>Calidad premium</p>
@@ -204,7 +235,7 @@
           </div>
         </div>
         <div class="box">
-          <img src="images/artes10.png" alt="Juego tamboras" />
+          <img src="images/artes10.webp" alt="Juego tamboras" />
           <div class="products-txt">
             <h3>Artesania juego de tamboras</h3>
             <p>Calidad premium</p>
@@ -215,7 +246,7 @@
           </div>
         </div>
         <div class="box">
-          <img src="images/artes11.png" alt="Mochila azul" />
+          <img src="images/artes11.webp" alt="Mochila azul" />
           <div class="products-txt">
             <h3>Mochila Arhuaca lana de oveja azul</h3>
             <p>Calidad replica</p>
@@ -226,7 +257,7 @@
           </div>
         </div>
         <div class="box">
-          <img src="images/artes12.png" alt="Mochila cafe" />
+          <img src="images/artes12.webp" alt="Mochila cafe" />
           <div class="products-txt">
             <h3>Mochila Arhuaca lana de oveja cafe</h3>
             <p>Calidad original</p>
@@ -237,7 +268,7 @@
           </div>
         </div>
         <div class="box">
-          <img src="images/artes13.png" alt="Sombrero vueltiao" />
+          <img src="images/artes13.webp" alt="Sombrero vueltiao" />
           <div class="products-txt">
             <h3>Sombrero vueltiao tricolor 21 vueltas</h3>
             <p>Calidad original en caña de flecha</p>
@@ -248,78 +279,100 @@
           </div>
         </div>
       </div>
-
       <div class="btn-2" id="load-more">Cargar Más</div>
     </main>
- <!-- Sección de Contacto -->
-<section id="contacto" class="contacto">
-  <div class="container">
-    <h2>Contacto</h2>
-    <p>Ponte en contacto con nosotros por correo o redes sociales.</p>
 
-    <form id="contacto-form">
-      <div class="input-group">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre" required />
+    <!-- Sección Contacto -->
+    <section id="contacto" class="contacto">
+      <div class="container">
+        <h2>Contacto</h2>
+        <p>Ponte en contacto con nosotros por correo o redes sociales.</p>
+        <form id="contacto-form">
+          <div class="input-group">
+            <label for="nombre">Nombre:</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Tu Nombre"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="email">Correo Electrónico:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Tu Correo"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="mensaje">Mensaje:</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="4"
+              placeholder="Escribe tu mensaje aquí..."
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn-1">Enviar</button>
+        </form>
       </div>
+    </section>
 
-      <div class="input-group">
-        <label for="email">Correo Electrónico:</label>
-        <input type="email" id="email" name="email" placeholder="Tu Correo" required />
-      </div>
-
-      <div class="input-group">
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
-      </div>
-
-      <button type="submit" class="btn-1">Enviar</button>
-    </form>
-  </div>
-</section>
-<footer class="footer">
-  <div class="footer-content container">
-      <div class="footer-top">
-          <!-- Sección de Políticas -->
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content container">
+        <div class="footer-top">
           <div class="politicas">
-              <h3>Políticas</h3>
-              <ul>
-                  <li><a href="politica-envio.html">Política de Envíos</a></li>
-                  <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
-                  <li><a href="politica-devoluciones.html">Política de Devoluciones</a></li>
-              </ul>
+            <h3>Políticas</h3>
+            <ul>
+              <li><a href="politica-envio.html">Política de Envío</a></li>
+              <li>
+                <a href="politica-privacidad.html">Política de Privacidad</a>
+              </li>
+              <li>
+                <a href="politica-devoluciones.html"
+                  >Política de Devoluciones</a
+                >
+              </li>
+            </ul>
           </div>
-
-          <!-- Sección de Redes Sociales -->
           <div class="redes-sociales">
-              <a href="#">
-                  <img src="images/facebook (1).png" alt="Facebook">
-                  <span>Facebook</span>
-              </a>
-              <a href="#">
-                  <img src="images/instagram.png" alt="Instagram">
-                  <span>Instagram</span>
-              </a>
-              <a href="#">
-                  <img src="images/whatsapp.png" alt="WhatsApp">
-                  <span>WhatsApp</span>
-              </a>
-              <a href="#">
-                  <img src="images/x.png" alt="X">
-                  <span>X (Twitter)</span>
-              </a>
-              <a href="#">
-                  <img src="images/tik-tok.png" alt="TikTok">
-                  <span>TikTok</span>
-              </a>
+            <a href="https://facebook.com" class="red-social-item">
+              <img src="images/facebook.webp" alt="Facebook" />
+              <span>Facebook</span>
+            </a>
+            <a href="https://instagram.com" class="red-social-item">
+              <img src="images/instagram.webp" alt="Instagram" />
+              <span>Instagram</span>
+            </a>
+            <a href="https://wa.me/1234567890" class="red-social-item">
+              <img src="images/whatsapp.webp" alt="WhatsApp" />
+              <span>WhatsApp</span>
+            </a>
+            <a href="https://x.com" class="red-social-item">
+              <img src="images/x.webp" alt="X" />
+              <span>X</span>
+            </a>
+            <a href="https://tiktok.com" class="red-social-item">
+              <img src="images/tik-tok.webp" alt="Tik-Tok" />
+              <span>Tik-Tok</span>
+            </a>
           </div>
+        </div>
+        <p class="footer-copyright">
+          © 2025 Artesanías del Hurtado - Todos los derechos reservados.
+        </p>
       </div>
+    </footer>
 
-      <!-- Párrafo de Derechos Reservados -->
-      <p>&copy; 2025 Artesanías del Hurtado - Todos los derechos reservados.</p>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+    <!-- Scripts -->
+    <!-- Scripts -->
+    <script src="https://checkout.epayco.co/checkout.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
