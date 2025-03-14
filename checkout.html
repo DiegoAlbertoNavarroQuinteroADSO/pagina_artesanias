@@ -8,15 +8,18 @@
       content="Formulario de pago para Artesanías del Hurtado - Ingresa tus datos para completar la compra."
     />
     <title>Formulario de Pago - Artesanías del Hurtado</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="politicas.css" />
   </head>
   <body>
     <!-- Header -->
     <header class="header">
       <div class="menu container">
         <div class="logo-container">
-          <a href="index.html" class="logo">
+          <a href="#" class="logo">
             <img
               src="images/header.webp"
               alt="Artesanías del Hurtado"
@@ -35,42 +38,42 @@
             <li><a href="index.html#servicios">Servicios</a></li>
             <li><a href="index.html#productos">Productos</a></li>
             <li><a href="index.html#contacto">Contacto</a></li>
-            <li class="submenu">
-              <a href="#" aria-label="Abrir carrito de compras">
-                <img
-                  id="img-carrito"
-                  src="images/car.svg"
-                  alt="Ícono de carrito de compras"
-                />
-                <span class="cart-count">0</span>
-              </a>
-              <div id="carrito">
-                <button id="cerrar-carrito">X</button>
-                <table id="lista-carrito">
-                  <thead>
-                    <tr>
-                      <th>Imagen</th>
-                      <th>Nombre</th>
-                      <th>Precio</th>
-                      <th>Cantidad</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody></tbody>
-                </table>
-                <div class="cart-footer">
-                  <a href="#" id="vaciar-carrito" class="btn-2"
-                    >Vaciar Carrito</a
-                  >
-                  <p id="total-carrito">Total: $0</p>
-                </div>
-                <a href="#" id="btn-pagar" class="btn-2" style="display: none"
-                  >Pagar</a
-                >
-              </div>
-            </li>
           </ul>
         </nav>
+        <ul>
+          <li class="submenu">
+            <a href="#" aria-label="Abrir carrito de compras">
+              <img
+                id="img-carrito"
+                src="images/car.svg"
+                alt="Ícono de carrito de compras"
+              />
+              <span class="cart-count">0</span>
+            </a>
+            <div id="carrito" class="carrito-contenedor">
+              <button id="cerrar-carrito">X</button>
+              <table id="lista-carrito">
+                <thead>
+                  <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+              <div class="cart-footer">
+                <a href="#" id="vaciar-carrito" class="btn-2">Vaciar Carrito</a>
+                <p id="total-carrito">Total: $0</p>
+              </div>
+              <a href="#" id="btn-pagar" class="btn-2" style="display: none"
+                >Pagar</a
+              >
+            </div>
+          </li>
+        </ul>
       </div>
     </header>
 
@@ -202,48 +205,8 @@
     </footer>
 
     <!-- Scripts -->
-    <script
-      data-cfasync="false"
-      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-    ></script>
     <script src="https://checkout.epayco.co/checkout.js"></script>
     <script src="script.js"></script>
     <script src="checkout.js"></script>
-    <!-- Nuevo script para manejar el formulario -->
-    <script>
-      (function () {
-        function c() {
-          var b = a.contentDocument || a.contentWindow.document;
-          if (b) {
-            var d = b.createElement("script");
-            d.innerHTML =
-              "window.__CF$cv$params={r:'91aa06242ca7b07a',t:'MTc0MTAxNDI0Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
-            b.getElementsByTagName("head")[0].appendChild(d);
-          }
-        }
-        if (document.body) {
-          var a = document.createElement("iframe");
-          a.height = 1;
-          a.width = 1;
-          a.style.position = "absolute";
-          a.style.top = 0;
-          a.style.left = 0;
-          a.style.border = "none";
-          a.style.visibility = "hidden";
-          document.body.appendChild(a);
-          if ("loading" !== document.readyState) c();
-          else if (window.addEventListener)
-            document.addEventListener("DOMContentLoaded", c);
-          else {
-            var e = document.onreadystatechange || function () {};
-            document.onreadystatechange = function (b) {
-              e(b);
-              "loading" !== document.readyState &&
-                ((document.onreadystatechange = e), c());
-            };
-          }
-        }
-      })();
-    </script>
   </body>
 </html>

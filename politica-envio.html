@@ -8,10 +8,15 @@
       content="Política de Envíos de Artesanías del Hurtado - Tiempos, condiciones y detalles de entrega en Colombia y el mundo."
     />
     <title>Política de Envíos - Artesanías del Hurtado</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="politicas.css" />
   </head>
   <body>
+    <!-- Header -->
     <!-- Header -->
     <header class="header">
       <div class="menu container">
@@ -32,49 +37,45 @@
         <nav class="navbar">
           <ul>
             <li><a href="index.html#inicio">Inicio</a></li>
-            <!-- Enlace a la sección Inicio -->
             <li><a href="index.html#servicios">Servicios</a></li>
-            <!-- Enlace a la sección Servicios -->
             <li><a href="index.html#productos">Productos</a></li>
-            <!-- Enlace a la sección Productos -->
             <li><a href="index.html#contacto">Contacto</a></li>
-            <!-- Enlace a la sección Contacto -->
-            <li class="submenu">
-              <a href="#" aria-label="Abrir carrito de compras">
-                <img
-                  id="img-carrito"
-                  src="images/car.svg"
-                  alt="Ícono de carrito de compras"
-                />
-                <span class="cart-count">0</span>
-              </a>
-              <div id="carrito">
-                <button id="cerrar-carrito">X</button>
-                <table id="lista-carrito">
-                  <thead>
-                    <tr>
-                      <th>Imagen</th>
-                      <th>Nombre</th>
-                      <th>Precio</th>
-                      <th>Cantidad</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody></tbody>
-                </table>
-                <div class="cart-footer">
-                  <a href="#" id="vaciar-carrito" class="btn-2"
-                    >Vaciar Carrito</a
-                  >
-                  <p id="total-carrito">Total: $0</p>
-                </div>
-                <a href="#" id="btn-pagar" class="btn-2" style="display: none"
-                  >Pagar</a
-                >
-              </div>
-            </li>
           </ul>
         </nav>
+        <ul>
+          <li class="submenu">
+            <a href="#" aria-label="Abrir carrito de compras">
+              <img
+                id="img-carrito"
+                src="images/car.svg"
+                alt="Ícono de carrito de compras"
+              />
+              <span class="cart-count">0</span>
+            </a>
+            <div id="carrito" class="carrito-contenedor">
+              <button id="cerrar-carrito">X</button>
+              <table id="lista-carrito">
+                <thead>
+                  <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+              <div class="cart-footer">
+                <a href="#" id="vaciar-carrito" class="btn-2">Vaciar Carrito</a>
+                <p id="total-carrito">Total: $0</p>
+              </div>
+              <a href="#" id="btn-pagar" class="btn-2" style="display: none"
+                >Pagar</a
+              >
+            </div>
+          </li>
+        </ul>
       </div>
     </header>
 
@@ -93,7 +94,6 @@
         </p>
         <br />
         <h3>Tiempos de Entrega</h3>
-        <br />
         <p>
           Los productos adquiridos serán entregados en un plazo aproximado de
           <strong>5 a 7 días hábiles</strong> dentro de Colombia. Este tiempo
@@ -104,7 +104,6 @@
         </p>
         <br />
         <h3>Condiciones de Entrega</h3>
-        <br />
         <p>
           Nos esforzamos por cumplir con los plazos establecidos, siempre y
           cuando no existan circunstancias externas que lo impidan, como
@@ -114,7 +113,6 @@
         </p>
         <br />
         <h3>Confirmación de Pago</h3>
-        <br />
         <p>
           Los tiempos de entrega comienzan a contar una vez confirmado el pago.
           Para pagos con tarjeta de crédito, la aprobación puede demorar hasta
@@ -124,7 +122,6 @@
         </p>
         <br />
         <h3>Contacto</h3>
-        <br />
         <p>
           Si tienes dudas sobre nuestra política de envíos, contáctanos en
           <a href="mailto:info@artesaniasdelhurtado.com"
@@ -135,7 +132,7 @@
     </main>
 
     <!-- Botón Volver -->
-    <a href="index.html" class="btn-2">Volver al inicio</a>
+    <a href="index.html" class="btn-4">Volver al inicio</a>
 
     <!-- Footer -->
     <footer class="footer">
@@ -183,6 +180,7 @@
         </p>
       </div>
     </footer>
+
     <!-- Scripts -->
     <script
       data-cfasync="false"
