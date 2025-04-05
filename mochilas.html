@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mochilas - Artesanías del Hurtado</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="menu container">
+        <div class="logo-container">
+          <a href="index.html" class="logo">
+            <img
+              src="images/header.webp"
+              alt="Artesanías del Hurtado"
+              class="logo-img"
+            />
+            <span class="logo-text">Artesanías del Hurtado</span>
+          </a>
+        </div>
+        <input type="checkbox" id="menu" />
+        <label for="menu">
+          <img src="images/menu.png" class="menu-icono" alt="Ícono de menú" />
+        </label>
+        <nav class="navbar">
+          <ul>
+            <li><a href="index.html#inicio">Inicio</a></li>
+            <li><a href="index.html#servicios">Servicios</a></li>
+            <li class="dropdown">
+              <a href="index.html#productos">Categorías</a>
+              <ul class="dropdown-menu">
+                  <a href="sombreros.html" data-category="sombreros">Sombreros</a>
+                </li>
+                <li>
+                  <a href="mochilas.html" data-category="mochilas">Mochilas</a>
+                </li>
+                <li>
+                  <a href="hamacas.html" data-category="hamacas">Hamacas</a>
+                </li>
+                <li>
+                  <a href="monederos.html" data-category="monederos">Monederos</a>
+                </li>
+                <li>
+                  <a href="accesorios.html" data-category="accesorios">Accesorios</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+        <ul>
+          <li class="submenu">
+            <a href="#" aria-label="Abrir carrito de compras">
+              <img
+                id="img-carrito"
+                src="images/car.svg"
+                alt="Ícono de carrito de compras"
+              />
+              <span class="cart-count">0</span>
+            </a>
+            <div id="carrito" class="carrito-contenedor">
+              <button id="cerrar-carrito">X</button>
+              <p class="carrito-vacio">Tu carrito está vacío</p>
+              <table id="lista-carrito">
+                <thead>
+                  <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+              <div class="cart-footer">
+                <a href="#" id="vaciar-carrito" class="btn-2">Vaciar Carrito</a>
+                <p id="total-carrito">Total: $0</p>
+              </div>
+              <a href="#" id="btn-pagar" class="btn-2" style="display: none"
+                >Pagar</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+   <!-- Sección de productos de la categoría -->
+<main class="products container">
+    <h2>Mochilas</h2>
+    <div class="box-container">
+      <div class="box">
+        <img src="images/mochila1.webp" alt="Mochila Azul" />
+        <div class="products-txt">
+          <h3>Mochila Arhuaca Lana de Oveja Azul</h3>
+          <p>Calidad original</p>
+          <p class="precio">$120,000</p>
+          <a href="#" class="agregar-carrito btn-3" data-id="1">Agregar al carrito</a>
+        </div>
+      </div>
+      <div class="box hidden">
+        <img src="images/mochila2.webp" alt="Mochila Cafe" />
+        <div class="products-txt">
+          <h3>Mochila Arhuaca Lana de Oveja Cafe</h3>
+          <p>Calidad original</p>
+          <p class="precio">$250,000</p>
+          <a href="#" class="agregar-carrito btn-3" data-id="2">Agregar al carrito</a>
+        </div>
+      </div>
+      <div class="box hidden">
+        <img src="images/mochila3.webp" alt="Mochila Wayuu" />
+        <div class="products-txt">
+          <h3>Mochila Wayuu Unicolor Fucsia</h3>
+          <p>Calidad original </p>
+          <p class="precio">$140,000</p>
+          <a href="#" class="agregar-carrito btn-3" data-id="3">Agregar al carrito</a>
+        </div>
+      </div>
+      <div class="box hidden">
+        <img src="images/mochila4.webp" alt="Mochila perlas " />
+        <div class="products-txt">
+          <h3>Mochila Wayuu Perlas Marino</h3>
+          <p>Calidad original</p>
+          <p class="precio">$210,000</p>
+          <a href="#" class="agregar-carrito btn-3" data-id="4">Agregar al carrito</a>
+        </div>
+      </div>
+      <div class="box hidden">
+        <img src="images/mochila5.webp" alt="Mochila Multicolor" />
+        <div class="products-txt">
+          <h3>Mochila Wayuu Multicolor</h3>
+          <p>Calidad original</p>
+          <p class="precio">$200,000</p>
+          <a href="#" class="agregar-carrito btn-3" data-id="5">Agregar al carrito</a>
+        </div>
+      </div>
+      <div class="box hidden">
+        <img src="images/mochila6.webp" alt="Mochila Negra" />
+        <div class="products-txt">
+          <h3>Mochila Arhuaca Lana de Oveja Negra</h3>
+          <p>Calidad original</p>
+          <p class="precio">$170,000</p>
+          <a href="#" class="agregar-carrito btn-3" data-id="6">Agregar al carrito</a>
+        </div>
+      </div>
+      <div class="box hidden">
+        <img src="images/mochila7.webp" alt="Mochila de hilo" />
+        <div class="products-txt">
+          <h3>Mochila  Wayuu Hilo Vinotinto</h3>
+          <p>Calidad original</p>
+          <p class="precio">$150,000</p>
+          <a href="#" class="agregar-carrito btn-3" data-id="7">Agregar al carrito</a>
+        </div>
+      </div>
+      <div class="box hidden">
+        <img src="images/mochila8.webp" alt="Mochila Verde " />
+        <div class="products-txt">
+          <h3>Mochila Wayuu Unicolor Verde</h3>
+          <p>Calidad original</p>
+          <p class="precio">$130,000</p>
+          <a href="#" class="agregar-carrito btn-3" data-id="8">Agregar al carrito</a>
+        </div>
+      </div>
+      <div class="box hidden">
+        <img src="images/mochila9.webp" alt="Mochila mandarina" />
+        <div class="products-txt">
+          <h3>Mochila Wayuu Unicolor Mandarina</h3>
+          <p>Calidad original</p>
+          <p class="precio">$150,000</p>
+          <a href="#" class="agregar-carrito btn-3" data-id="9">Agregar al carrito</a>
+        </div>
+      </div>
+      <div class="box hidden">
+        <img src="images/mochila10.webp" alt="Mochila multicolor wayuu" />
+        <div class="products-txt">
+          <h3>Mochila Wayuu Multicolor Gris</h3>
+          <p>Diseño exclusivo</p>
+          <p class="precio">$220,000</p>
+          <a href="#" class="agregar-carrito btn-3" data-id="10">Agregar al carrito</a>
+        </div>
+      </div>
+    </div>
+    <div class="btn-2" id="load-more">Cargar Más</div>
+  </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content container">
+        <div class="footer-top">
+          <div class="politicas">
+            <h3>Políticas</h3>
+            <ul>
+              <li><a href="politica-envio.html">Política de Envío</a></li>
+              <li>
+                <a href="politica-privacidad.html">Política de Privacidad</a>
+              </li>
+              <li>
+                <a href="politica-devoluciones.html"
+                  >Política de Devoluciones</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="redes-sociales">
+            <a href="https://facebook.com" class="red-social-item">
+              <img src="images/facebook.webp" alt="Facebook" />
+              <span>Facebook</span>
+            </a>
+            <a href="https://instagram.com" class="red-social-item">
+              <img src="images/instagram.webp" alt="Instagram" />
+              <span>Instagram</span>
+            </a>
+            <a href="https://wa.me/1234567890" class="red-social-item">
+              <img src="images/whatsapp.webp" alt="WhatsApp" />
+              <span>WhatsApp</span>
+            </a>
+            <a href="https://x.com" class="red-social-item">
+              <img src="images/x.webp" alt="X" />
+              <span>X</span>
+            </a>
+            <a href="https://tiktok.com" class="red-social-item">
+              <img src="images/tik-tok.webp" alt="Tik-Tok" />
+              <span>Tik-Tok</span>
+            </a>
+          </div>
+        </div>
+        <p class="footer-copyright">
+          © 2025 Artesanías del Hurtado - Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://checkout.epayco.co/checkout.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
