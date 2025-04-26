@@ -40,7 +40,32 @@
           <ul>
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#productos">Productos</a></li>
+            <li class="dropdown">
+              <a href="#productos">Categorías</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="sombreros.html" data-category="sombreros"
+                    >Sombreros</a
+                  >
+                </li>
+                <li>
+                  <a href="mochilas.html" data-category="mochilas">Mochilas</a>
+                </li>
+                <li>
+                  <a href="hamacas.html" data-category="hamacas">Hamacas</a>
+                </li>
+                <li>
+                  <a href="monederos.html" data-category="monederos"
+                    >Monederos</a
+                  >
+                </li>
+                <li>
+                  <a href="accesorios.html" data-category="accesorios"
+                    >Accesorios</a
+                  >
+                </li>
+              </ul>
+            </li>
             <li><a href="#contacto">Contacto</a></li>
           </ul>
         </nav>
@@ -84,14 +109,35 @@
 
     <!-- Sección Inicio -->
     <section id="inicio" class="inicio">
+      <div class="inicio-background">
+        <img
+          src="images/inicio .webp"
+          alt="Artesanos tejiendo sombreros vueltiao"
+          class="inicio-img"
+          loading="lazy"
+        />
+      </div>
       <div class="inicio-content container">
         <div class="inicio-text">
           <h1>Bienvenido a Artesanías del Hurtado</h1>
+          <p class="inicio-subtitle">Tradición Colombiana Hecha a Mano</p>
           <p>
-            Descubre la esencia de nuestra tradición y cultura en cada pieza
-            artesanal. Productos únicos hechos a mano con amor y calidad.
+            Descubre la esencia de nuestra
+            <strong>tradición y cultura</strong> en cada pieza artesanal.
+            Productos únicos hechos con amor y calidad desde Valledupar,
+            Colombia.
           </p>
-          <a href="#productos" class="btn-1">Explorar Productos</a>
+          <div class="inicio-local">
+            <img
+              src="images/colombia.webp"
+              alt="Icono de Colombia"
+              class="local-icon"
+            />
+            <span> Valledupar, Colombia</span>
+          </div>
+          <div class="inicio-buttons">
+            <a href="#productos" class="btn-1">Explorar Productos</a>
+          </div>
         </div>
       </div>
     </section>
@@ -126,153 +172,49 @@
 
     <!-- Sección Productos -->
     <main id="productos" class="products container">
-      <h2>Productos</h2>
-      <div class="box-container" id="lista-1">
-        <div class="box">
-          <img src="images/artes1.webp" alt="Porta incienso" />
-          <div class="products-txt">
-            <h3>Porta incienso</h3>
-            <p>Calidad premium</p>
-            <p class="precio">$25,000</p>
-            <a href="#" class="agregar-carrito btn-3" data-id="1"
-              >Agregar al carrito</a
-            >
+      <h2>Categorías</h2>
+      <p>
+        Explora nuestra colección de artesanías colombianas: sombreros vueltiao,
+        mochilas wayuu, hamacas y más, elaborados por artesanos expertos.
+      </p>
+      .
+      <div class="categories-grid">
+        <a href="sombreros.html" class="category-card">
+          <img src="images/sombrero1.webp" alt="Sombreros" />
+          <div class="category-overlay">
+            <h3>Sombreros</h3>
+            <span class="category-arrow">→</span>
           </div>
-        </div>
-        <div class="box">
-          <img src="images/artes2.webp" alt="Destapador artesanal" />
-          <div class="products-txt">
-            <h3>Destapador artesanal</h3>
-            <p>Calidad original</p>
-            <p class="precio">$10,000</p>
-            <a href="#" class="agregar-carrito btn-3" data-id="2"
-              >Agregar al carrito</a
-            >
+        </a>
+        <a href="mochilas.html" class="category-card">
+          <img src="images/mochila1.webp" alt="Mochilas" />
+          <div class="category-overlay">
+            <h3>Mochilas</h3>
+            <span class="category-arrow">→</span>
           </div>
-        </div>
-        <div class="box">
-          <img src="images/artes3.webp" alt="Avanico de mano" />
-          <div class="products-txt">
-            <h3>Avanico de mano</h3>
-            <p>Calidad en palma de iraca</p>
-            <p class="precio">$15,000</p>
-            <a href="#" class="agregar-carrito btn-3" data-id="3"
-              >Agregar al carrito</a
-            >
+        </a>
+        <a href="hamacas.html" class="category-card">
+          <img src="images/hamaca1.webp" alt="Hamacas" />
+          <div class="category-overlay">
+            <h3>Hamacas</h3>
+            <span class="category-arrow">→</span>
           </div>
-        </div>
-        <div class="box">
-          <img src="images/artes4.webp" alt="Recuerdo valledupar" />
-          <div class="products-txt">
-            <h3>Recuerdo valledupar</h3>
-            <p>Calidad en madera</p>
-            <p class="precio">$20,000</p>
-            <a href="#" class="agregar-carrito btn-3" data-id="4"
-              >Agregar al carrito</a
-            >
+        </a>
+        <a href="monederos.html" class="category-card">
+          <img src="images/monedero1.webp" alt="Monederos" />
+          <div class="category-overlay">
+            <h3>Monederos</h3>
+            <span class="category-arrow">→</span>
           </div>
-        </div>
-        <div class="box">
-          <img src="images/artes5.webp" alt="Sandalia artesanal" />
-          <div class="products-txt">
-            <h3>Sandalia artesanal</h3>
-            <p>Calidad en cuero</p>
-            <p class="precio">$50,000</p>
-            <a href="#" class="agregar-carrito btn-3" data-id="5"
-              >Agregar al carrito</a
-            >
+        </a>
+        <a href="accesorios.html" class="category-card">
+          <img src="images/accesorio1.webp" alt="Accesorios" />
+          <div class="category-overlay">
+            <h3>Accesorios</h3>
+            <span class="category-arrow">→</span>
           </div>
-        </div>
-        <div class="box">
-          <img src="images/artes6.webp" alt="Sombrero vueltiao" />
-          <div class="products-txt">
-            <h3>Sombrero 15 vueltas</h3>
-            <p>Calidad exclusivo</p>
-            <p class="precio">$280,000</p>
-            <a href="#" class="agregar-carrito btn-3" data-id="6"
-              >Agregar al carrito</a
-            >
-          </div>
-        </div>
-        <div class="box">
-          <img src="images/artes7.webp" alt="Hamaca doble" />
-          <div class="products-txt">
-            <h3>Hamaca doble flecos</h3>
-            <p>Calidad original algodon</p>
-            <p class="precio">$650,000</p>
-            <a href="#" class="agregar-carrito btn-3" data-id="7"
-              >Agregar al carrito</a
-            >
-          </div>
-        </div>
-        <div class="box">
-          <img src="images/artes8.webp" alt="Estera artesanal" />
-          <div class="products-txt">
-            <h3>Estera artesanal</h3>
-            <p>Calidad lana de oveja</p>
-            <p class="precio">$90,000</p>
-            <a href="#" class="agregar-carrito btn-3" data-id="8"
-              >Agregar al carrito</a
-            >
-          </div>
-        </div>
-        <div class="box">
-          <img src="images/artes9.webp" alt="Porta llaves" />
-          <div class="products-txt">
-            <h3>Porta llaves madera tigres</h3>
-            <p>Calidad premium</p>
-            <p class="precio">$35,000</p>
-            <a href="#" class="agregar-carrito btn-3" data-id="9"
-              >Agregar al carrito</a
-            >
-          </div>
-        </div>
-        <div class="box">
-          <img src="images/artes10.webp" alt="Juego tamboras" />
-          <div class="products-txt">
-            <h3>Artesania juego de tamboras</h3>
-            <p>Calidad premium</p>
-            <p class="precio">$25,000</p>
-            <a href="#" class="agregar-carrito btn-3" data-id="10"
-              >Agregar al carrito</a
-            >
-          </div>
-        </div>
-        <div class="box">
-          <img src="images/artes11.webp" alt="Mochila azul" />
-          <div class="products-txt">
-            <h3>Mochila Arhuaca lana de oveja azul</h3>
-            <p>Calidad replica</p>
-            <p class="precio">$30,000</p>
-            <a href="#" class="agregar-carrito btn-3" data-id="11"
-              >Agregar al carrito</a
-            >
-          </div>
-        </div>
-        <div class="box">
-          <img src="images/artes12.webp" alt="Mochila cafe" />
-          <div class="products-txt">
-            <h3>Mochila Arhuaca lana de oveja cafe</h3>
-            <p>Calidad original</p>
-            <p class="precio">$250,000</p>
-            <a href="#" class="agregar-carrito btn-3" data-id="12"
-              >Agregar al carrito</a
-            >
-          </div>
-        </div>
-        <div class="box">
-          <img src="images/artes13.webp" alt="Sombrero vueltiao" />
-          <div class="products-txt">
-            <h3>Sombrero vueltiao tricolor 21 vueltas</h3>
-            <p>Calidad original en caña de flecha</p>
-            <p class="precio">$220,000</p>
-            <a href="#" class="agregar-carrito btn-3" data-id="13"
-              >Agregar al carrito</a
-            >
-          </div>
-        </div>
+        </a>
       </div>
-      <div class="btn-2" id="load-more">Cargar Más</div>
     </main>
 
     <!-- Sección Contacto -->
@@ -366,5 +308,40 @@
     <!-- Scripts -->
     <script src="https://checkout.epayco.co/checkout.js"></script>
     <script src="script.js"></script>
+    <script>
+      (function () {
+        function c() {
+          var b = a.contentDocument || a.contentWindow.document;
+          if (b) {
+            var d = b.createElement("script");
+            d.innerHTML =
+              "window.__CF$cv$params={r:'927004498cbdbf82',t:'MTc0MzA5MDM0Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+            b.getElementsByTagName("head")[0].appendChild(d);
+          }
+        }
+        if (document.body) {
+          var a = document.createElement("iframe");
+          a.height = 1;
+          a.width = 1;
+          a.style.position = "absolute";
+          a.style.top = 0;
+          a.style.left = 0;
+          a.style.border = "none";
+          a.style.visibility = "hidden";
+          document.body.appendChild(a);
+          if ("loading" !== document.readyState) c();
+          else if (window.addEventListener)
+            document.addEventListener("DOMContentLoaded", c);
+          else {
+            var e = document.onreadystatechange || function () {};
+            document.onreadystatechange = function (b) {
+              e(b);
+              "loading" !== document.readyState &&
+                ((document.onreadystatechange = e), c());
+            };
+          }
+        }
+      })();
+    </script>
   </body>
 </html>

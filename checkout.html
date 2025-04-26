@@ -14,148 +14,191 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <!-- Header -->
-    <header class="header">
-      <div class="menu container">
-        <div class="logo-container">
-          <a href="#" class="logo">
-            <img
-              src="images/header.webp"
-              alt="Artesanías del Hurtado"
-              class="logo-img"
-            />
-            <span class="logo-text">Artesanías del Hurtado</span>
-          </a>
-        </div>
-        <input type="checkbox" id="menu" />
-        <label for="menu">
-          <img src="images/menu.png" class="menu-icono" alt="Ícono de menú" />
-        </label>
-        <nav class="navbar">
-          <ul>
-            <li><a href="index.html#inicio">Inicio</a></li>
-            <li><a href="index.html#servicios">Servicios</a></li>
-            <li><a href="index.html#productos">Productos</a></li>
-            <li><a href="index.html#contacto">Contacto</a></li>
-          </ul>
-        </nav>
-        <ul>
-          <li class="submenu">
-            <a href="#" aria-label="Abrir carrito de compras">
-              <img
-                id="img-carrito"
-                src="images/car.svg"
-                alt="Ícono de carrito de compras"
-              />
-              <span class="cart-count">0</span>
-            </a>
-            <div id="carrito" class="carrito-contenedor">
-              <button id="cerrar-carrito">X</button>
-              <table id="lista-carrito">
-                <thead>
-                  <tr>
-                    <th>Imagen</th>
-                    <th>Nombre</th>
-                    <th>Precio</th>
-                    <th>Cantidad</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody></tbody>
-              </table>
-              <div class="cart-footer">
-                <a href="#" id="vaciar-carrito" class="btn-2">Vaciar Carrito</a>
-                <p id="total-carrito">Total: $0</p>
-              </div>
-              <a href="#" id="btn-pagar" class="btn-2" style="display: none"
-                >Pagar</a
-              >
-            </div>
-          </li>
-        </ul>
+  <!-- Header -->
+  <header class="header">
+    <div class="menu container">
+      <div class="logo-container">
+        <a href="#" class="logo">
+          <img
+            src="images/header.webp"
+            alt="Artesanías del Hurtado"
+            class="logo-img"
+          />
+          <span class="logo-text">Artesanías del Hurtado</span>
+        </a>
       </div>
-    </header>
-
-    <!-- Contenido Principal: Formulario de Pago -->
-    <main class="container">
-      <section class="checkout-form">
-        <h1>Completa tu compra</h1>
-        <form id="payment-form">
-          <div class="input-group">
-            <label for="nombre">Nombre completo:</label>
-            <input
-              type="text"
-              id="nombre"
-              name="nombre"
-              placeholder="Tu Nombre"
-              required
+      <input type="checkbox" id="menu" />
+      <label for="menu">
+        <img src="images/menu.png" class="menu-icono" alt="Ícono de menú" />
+      </label>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li><a href="index.html#servicios">Servicios</a></li>
+          <li><a href="index.html#productos">Productos</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <ul>
+        <li class="submenu">
+          <a href="#" aria-label="Abrir carrito de compras">
+            <img
+              id="img-carrito"
+              src="images/car.svg"
+              alt="Ícono de carrito de compras"
             />
-          </div>
-          <div class="input-group">
-            <label for="email">Correo Electrónico:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Tu Correo"
-              required
-            />
-          </div>
-          <div class="input-group">
-            <label>Dirección de entrega:</label>
-            <div class="address-group">
-              <input
-                type="text"
-                id="calle"
-                name="calle"
-                placeholder="Calle"
-                required
-              />
-              <input
-                type="text"
-                id="numero"
-                name="numero"
-                placeholder="Número"
-                required
-              />
-              <input
-                type="text"
-                id="barrio"
-                name="barrio"
-                placeholder="Barrio"
-                required
-              />
-              <input
-                type="text"
-                id="ciudad"
-                name="ciudad"
-                placeholder="Ciudad"
-                required
-              />
-              <input
-                type="text"
-                id="departamento"
-                name="departamento"
-                placeholder="Departamento"
-                required
-              />
+            <span class="cart-count">0</span>
+          </a>
+          <div id="carrito" class="carrito-contenedor">
+            <button id="cerrar-carrito">X</button>
+            <table id="lista-carrito">
+              <thead>
+                <tr>
+                  <th>Imagen</th>
+                  <th>Nombre</th>
+                  <th>Precio</th>
+                  <th>Cantidad</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <div class="cart-footer">
+              <a href="#" id="vaciar-carrito" class="btn-2">Vaciar Carrito</a>
+              <p id="total-carrito">Total: $0</p>
             </div>
+            <a href="#" id="btn-pagar" class="btn-2" style="display: none"
+              >Pagar</a
+            >
           </div>
-          <div class="input-group">
-            <label for="telefono">Teléfono:</label>
-            <input
-              type="tel"
-              id="telefono"
-              name="telefono"
-              placeholder="Tu Teléfono"
-              required
-            />
-          </div>
-          <button type="submit" class="btn-1">Procesar Pago</button>
-        </form>
-      </section>
-    </main>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Contenido Principal: Formulario de Pago -->
+  <main class="container checkout-container">
+    <section class="checkout-form">
+      <h1 class="checkout-title">Finalizar tu Compra</h1>
+      <a href="javascript:history.back()" class="back-link"
+        ><i class="fas fa-arrow-left"></i> Volver atrás</a
+      >
+      <div class="checkout-grid">
+        <!-- Resumen de la Compra -->
+        <div class="resumen-compra">
+          <h2>Resumen de tu Compra</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Subtotal</th>
+              </tr>
+            </thead>
+            <tbody id="resumen-carrito"></tbody>
+          </table>
+          <p class="total" id="total-compra">Total: $0</p>
+        </div>
+
+        <!-- Formulario de Pago -->
+        <div class="formulario-pago">
+          <h2>Tus Datos</h2>
+          <form id="payment-form">
+            <div class="input-group">
+              <label for="nombre">Nombre completo:</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Tu Nombre"
+                required
+              />
+              <span class="error" id="error-nombre"></span>
+            </div>
+            <div class="input-group">
+              <label for="email">Correo Electrónico:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Tu Correo"
+                required
+              />
+              <span class="error" id="error-email"></span>
+            </div>
+            <div class="input-group">
+              <label>Dirección de entrega:</label>
+              <div class="address-group">
+                <div>
+                  <input
+                    type="text"
+                    id="calle"
+                    name="calle"
+                    placeholder="Calle"
+                    required
+                  />
+                  <span class="error" id="error-calle"></span>
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    id="numero"
+                    name="numero"
+                    placeholder="Número"
+                    required
+                  />
+                  <span class="error" id="error-numero"></span>
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    id="barrio"
+                    name="barrio"
+                    placeholder="Barrio"
+                    required
+                  />
+                  <span class="error" id="error-barrio"></span>
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    id="ciudad"
+                    name="ciudad"
+                    placeholder="Ciudad"
+                    required
+                  />
+                  <span class="error" id="error-ciudad"></span>
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    id="departamento"
+                    name="departamento"
+                    placeholder="Departamento"
+                    required
+                  />
+                  <span class="error" id="error-departamento"></span>
+                </div>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="telefono">Teléfono:</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="Tu Teléfono"
+                required
+              />
+              <span class="error" id="error-telefono"></span>
+            </div>
+            <button type="submit" class="btn-procesar">Procesar Pago</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
     <!-- Footer -->
     <footer class="footer">

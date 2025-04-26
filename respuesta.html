@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Respuesta de Pago - Artesanías del Hurtado</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="menu container">
+        <div class="logo-container">
+          <a href="index.html" class="logo">
+            <img
+              src="images/header.webp"
+              alt="Artesanías del Hurtado"
+              class="logo-img"
+            />
+            <span class="logo-text">Artesanías del Hurtado</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1>Resultado del Pago</h1>
+      <div id="resultado-pago">
+        <p>Procesando tu pago...</p>
+      </div>
+      <a href="index.html" class="btn-2">Volver al Inicio</a>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content container">
+        <p class="footer-copyright">
+          © 2025 Artesanías del Hurtado - Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Obtener parámetros de la URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const refPayco = urlParams.get("ref_payco");
+      const transactionState = urlParams.get("x_transaction_state");
+      const amount = urlParams.get("x_amount");
+
+      const resultadoDiv = document.getElementById("resultado-pago");
+
+      if (transactionState === "Aceptada") {
+        resultadoDiv.innerHTML = `
+          <p>¡Pago exitoso!</p>
+          <p>Referencia: ${refPayco}</p>
+          <p>Monto: $${parseFloat(amount).toLocaleString()}</p>
+          <p>Gracias por tu compra. Recibirás un correo con los detalles.</p>
+        `;
+        // Limpiar el carrito después de un pago exitoso
+        localStorage.removeItem("carrito");
+      } else {
+        resultadoDiv.innerHTML = `
+          <p>El pago no fue exitoso.</p>
+          <p>Estado: ${transactionState}</p>
+          <p>Por favor, intenta de nuevo o contáctanos para asistencia.</p>
+        `;
+      }
+    </script>
+  </body>
+</html>

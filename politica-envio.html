@@ -13,7 +13,6 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="politicas.css" />
   </head>
   <body>
     <!-- Header -->
@@ -21,7 +20,7 @@
     <header class="header">
       <div class="menu container">
         <div class="logo-container">
-          <a href="#" class="logo">
+          <a href="index.html" class="logo">
             <img
               src="images/header.webp"
               alt="Artesanías del Hurtado"
@@ -94,14 +93,27 @@
         </p>
         <br />
         <h3>Tiempos de Entrega</h3>
-        <p>
-          Los productos adquiridos serán entregados en un plazo aproximado de
-          <strong>5 a 7 días hábiles</strong> dentro de Colombia. Este tiempo
-          puede variar según la ubicación del destino. Para envíos
-          internacionales, el plazo se confirmará con un asesor antes y después
-          de la compra. Los tiempos de entrega se cuentan a partir del día hábil
-          siguiente si la compra se realiza en sábado, domingo o festivo.
-        </p>
+        <table class="delivery-table">
+          <thead>
+            <tr>
+              <th>Región</th>
+              <th>Plazo (días hábiles)</th>
+              <th>Condiciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Colombia (Ciudades Principales)</td>
+              <td>5-7</td>
+              <td>Desde el día hábil siguiente al pago</td>
+            </tr>
+            <tr>
+              <td>Internacional</td>
+              <td>Por confirmar</td>
+              <td>Consulta con asesor</td>
+            </tr>
+          </tbody>
+        </table>
         <br />
         <h3>Condiciones de Entrega</h3>
         <p>
@@ -123,7 +135,7 @@
         <br />
         <h3>Contacto</h3>
         <p>
-          Si tienes dudas sobre nuestra política de envíos, contáctanos en
+          Para dudas, contáctanos en
           <a href="mailto:info@artesaniasdelhurtado.com"
             >info@artesaniasdelhurtado.com</a
           >.
@@ -182,10 +194,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script
-      data-cfasync="false"
-      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-    ></script>
+
     <script src="https://checkout.epayco.co/checkout.js"></script>
     <script src="script.js"></script>
     <script src="checkout.js"></script>
